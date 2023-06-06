@@ -5,15 +5,12 @@ The "DIY Digital Audio Equalizer with DSP" is a project that introduces you to t
 
 For the purposes of this project I intend to cut background noises and boost a specific range of frequencies to improve sound quality. 
 
-**Software Steps**
+**Roadmap**
 1. Identify the frequency (or frequency range) we want to isolate and boost the amplitude of this when outputting into the speaker 
 2. Create a digital bandpass filter such that the waves with a differing frequency are squashed
     - This can be done by running an fft and squashing the noise components that are not at the fundamental frequency or its range and then running the reverse fft that the new signal may then be outputted into the speaker 
     - Also attempt to make this process instantaenous so that the delay is not noticed
 
-
-[Project Idea list ](https://www.notion.so/Project-Idea-list-1ce40508100c48898971503b3b081e34?pvs=21)
-[**Brainstorming** ](https://www.notion.so/Brainstorming-a87d4e1ccb6f49d4839233880a66e029?pvs=21)
 
 **Hardware Components:**
 1. **Microphone:** To capture audio input.
@@ -30,4 +27,26 @@ For the purposes of this project I intend to cut background noises and boost a s
 This project should give you a good introduction to audio processing with a DSP. While it's much simpler than the voice recognition project, it still provides a practical application of DSP in audio processing.
 
 
-[More complex implementation ](https://www.notion.so/More-complex-implementation-4f9e1ec6a8644b9aa8ac8264bf9d0d59?pvs=21)
+
+**IDEA** An Idea for later is to output the user's words into a text file - this can be used as a conversational assist [For example - Siri] (https://www.geeksforgeeks.org/performing-google-search-using-python-code/)
+
+
+
+
+
+
+STEPS AS ILLUSTRATED 
+# STEP 1 - Creating and Reading the Audio file [Part1]
+First create the wave file using Arduino then python will read the file and convert it into a signal array 
+
+
+The following link gives suggestions in Python in reading the wave signal and graphing it: 
+https://www.geeksforgeeks.org/plotting-various-sounds-on-graphs-using-python-and-matplotlib/
+
+
+# STEP 2 - Run the fft on the sinal and detect the correct frequency [Part2]
+After running the fft of the signal detect the Frequency or frequency range of which the user is speaking at (man - 80 to 180 Hz, woman - 165 to 255 Hz), can ask user questions in order to correctly detect what range to output or consider. 
+
+After detecting the correct frequency of the user squash the other frequencies and output the user's speaking. 
+
+**NOTE** what happens if some noise exists at the frequency the frequency rangetthe user is speaking in [ConsiderFilters]
