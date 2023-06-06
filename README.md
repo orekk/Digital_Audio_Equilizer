@@ -5,7 +5,7 @@ The "DIY Digital Audio Equalizer with DSP" is a project that introduces you to t
 
 For the purposes of this project I intend to cut background noises and boost a specific range of frequencies to improve sound quality. 
 
-**Steps**
+**Software Steps**
 1. Identify the frequency (or frequency range) we want to isolate and boost the amplitude of this when outputting into the speaker 
 2. Create a digital bandpass filter such that the waves with a differing frequency are squashed
     - This can be done by running an fft and squashing the noise components that are not at the fundamental frequency or its range and then running the reverse fft that the new signal may then be outputted into the speaker 
